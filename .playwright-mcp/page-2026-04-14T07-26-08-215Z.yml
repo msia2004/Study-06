@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - heading "🛒 쇼핑 리스트" [level=1] [ref=e3]:
+    - generic [ref=e4]: 🛒
+    - text: 쇼핑 리스트
+  - generic [ref=e5]:
+    - textbox "아이템 입력..." [active] [ref=e6]
+    - button "＋" [ref=e7] [cursor=pointer]
+  - generic [ref=e8]: 총 2개 중 0개 완료
+  - list [ref=e11]:
+    - listitem [ref=e16]:
+      - checkbox [ref=e17] [cursor=pointer]
+      - generic [ref=e18]: 사과
+      - button "🗑" [ref=e19] [cursor=pointer]
+    - listitem [ref=e20]:
+      - checkbox [ref=e21] [cursor=pointer]
+      - generic [ref=e22]: 바나나
+      - button "🗑" [ref=e23] [cursor=pointer]
+  - button "완료된 항목 모두 삭제" [ref=e10] [cursor=pointer]
