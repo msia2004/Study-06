@@ -203,15 +203,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    const { createClient } = supabase;
-    let db;
+    const SUPABASE_URL = 'https://fydltdtalelugaxkulqu.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5ZGx0ZHRhbGVsdWdheGt1bHF1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYyODk3OTYsImV4cCI6MjA5MTg2NTc5Nn0.Nue61ZDHR6u92MrtkMcFZAu0GNCSXmBTOUMUPwLnG74';
 
-    async function initSupabase() {
-      const res = await fetch('/api/config');
-      const { supabaseUrl, supabaseKey } = await res.json();
-      db = createClient(supabaseUrl, supabaseKey);
-      await loadItems();
-    }
+    const { createClient } = supabase;
+    const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     const input = document.getElementById('itemInput');
     const addBtn = document.getElementById('addBtn');
@@ -321,7 +317,7 @@
     input.addEventListener('keydown', e => { if (e.key === 'Enter') addItem(); });
     clearBtn.addEventListener('click', clearChecked);
 
-    initSupabase();
+    loadItems();
   </script>
 </body>
 </html>
