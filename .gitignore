@@ -1,2 +1,7 @@
 .playwright-mcp/
 *.png
+.env
+.env.local
+.vercel
+
+.vercel
